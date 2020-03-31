@@ -36,7 +36,7 @@ if (num2<num1)
     } else {
       return 0;
     }
-  };
+  }
   
   const firstLastNameIsFirstAlphabetically = function (name1, name2) {
     const lastName1 = name1.slice(name1.indexOf(' ')+1)
@@ -48,22 +48,27 @@ if (num2<num1)
     } else {
       return 0;
     }
-  };
+  }
   
-
+  const trueIsFirst = function (truth, wrong) {
+    if (truth < wrong) {
+      return 1;
+    } else if (truth > wrong) {
+      return -1;
+    } else {
+      return 0;
+    }
+  } 
   
-  
-  
-  
-
-
 
 
 /************************
 // ITERATION FUNCTIONS
  ************************/
-
-
+const trueFirst = function (num) {
+  const newArray = num.slice();
+  return newArray.sort(trueIsFirst);
+}
 
 
 /*********************************
